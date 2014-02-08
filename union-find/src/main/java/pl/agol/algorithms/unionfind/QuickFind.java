@@ -7,7 +7,7 @@ package pl.agol.algorithms.unionfind;
  */
 public class QuickFind implements UnionFind {
 
-	private int[] id;
+	private final int[] id;
 
 	public QuickFind(int elemNumber) {
 		id = new int[elemNumber];
@@ -15,10 +15,12 @@ public class QuickFind implements UnionFind {
 			id[i] = i;
 	}
 
+	@Override
 	public boolean connected(int p, int q) {
 		return id[p] == id[q];
 	}
 
+	@Override
 	public void union(int p, int q) {
 		int pId = id[p];
 		int qId = id[q];
