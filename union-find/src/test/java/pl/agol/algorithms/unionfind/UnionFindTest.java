@@ -41,6 +41,6 @@ public class UnionFindTest {
 
 	@DataProvider(name = "algorithmsProvider")
 	private Object[][] paramsProvider() {
-		return new Object[][] { { new QuickFind(ELEM_NUMNBER) } };
+		return new Object[][] { { new QuickFind(ELEM_NUMNBER) }, { new QuickUnion(ELEM_NUMNBER) } };
 	}
 }
